@@ -1,0 +1,29 @@
+site_name: Mitch's Blog (better name incoming)
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.sections
+    - content.tooltips
+  icon:
+    annotation: material/star-four-points-circle
+plugins:
+  - blog:
+      blog_dir: .
+  - search
+  - tags
+  - glightbox
+
+nav:
+  - index.md
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["docs/assets/code/"]
+      url_download: true
