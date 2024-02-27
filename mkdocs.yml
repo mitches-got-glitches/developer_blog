@@ -25,5 +25,5 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.snippets:
-      base_path: ["docs/assets/code/"]
+      base_path: ["docs/posts", "docs/snippets"]
       url_download: true

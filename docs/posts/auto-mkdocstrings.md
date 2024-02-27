@@ -166,7 +166,7 @@ This requires the following changes to the [`gen_ref_pages.py`][gen-ref-pages.py
 These changes allowed the full API reference to be built successfully, and it looked like this in
 the docs:
 
-![dynaconf API reference](img/dynaconf_api.png)
+![dynaconf API reference](../img/dynaconf_api.png)
 
 ### Simplifying it
 
@@ -223,13 +223,13 @@ plugins:
 ```
 
 1. Adds the `class` symbol in front of the object:
-   ![Adds symbols](img/symbol_type_heading.png)
+   ![Adds symbols](../img/symbol_type_heading.png)
 2. Adds symbols to the table of contents:
-   ![ToC Symbols](img/toc_symbols.png)
+   ![ToC Symbols](../img/toc_symbols.png)
 3. Removes the module from the top of the toc - it doesn't correspond to anything on the page:
-   ![Module in Toc](img/mod_in_toc.png)
+   ![Module in Toc](../img/mod_in_toc.png)
 4. Adds the full dot path to the object:
-   ![Dot path](img/symbol_type_heading.png)
+   ![Dot path](../img/symbol_type_heading.png)
 
 Further CSS customisation was added for the Material theme, [as recommended in the mkdocstrings
 docs][material-mkdocstrings-style]. I put the CSS in `docs/stylesheets/mkdocstrings.css` and added
