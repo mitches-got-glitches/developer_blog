@@ -1,6 +1,5 @@
 ---
-draft: true
-date: 2024-02-22
+date: 2024-02-27
 categories:
   - python
   - documentation
