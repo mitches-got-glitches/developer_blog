@@ -6,6 +6,7 @@ categories:
   - mkdocs
 authors:
   - mitches-got-glitches
+comments: true
 ---
 
 # Auto-generating package API with `mkdocstrings`

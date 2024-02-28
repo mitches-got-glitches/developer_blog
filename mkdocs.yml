@@ -2,7 +2,7 @@ site_name: Mitch's Blog (better name incoming)
 site_url: https://mitches-got-glitches.github.io/developer_blog/
 theme:
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   features:
     - content.code.copy
     - content.code.annotate
@@ -29,5 +29,3 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: ["docs/posts", "docs/snippets"]
       url_download: true
-extra:
-  disqus: mitches-got-glitches
