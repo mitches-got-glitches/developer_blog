@@ -29,3 +29,7 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: ["docs/posts", "docs/snippets"]
       url_download: true
+extra:
+  analytics:
+    provider: google
+    property: G-NJ46997RBE
