@@ -1,3 +1,4 @@
 mkdocs-material
 mkdocstrings
 mkdocs-glightbox
+pre-commit
