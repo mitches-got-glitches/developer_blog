@@ -1,15 +1,47 @@
-site_name: Mitch's Blog (better name incoming)
+site_name: Daft Dev (Blog by Mitch)
 site_url: https://mitches-got-glitches.github.io/developer_blog/
 theme:
   name: material
+  logo: img/pigeon.png
   custom_dir: overrides
   features:
     - content.code.copy
     - content.code.annotate
     - navigation.sections
+    - navigation.footer
     - content.tooltips
   icon:
     annotation: material/star-four-points-circle
+  font:
+    text: Nunito Sans
+    # text: Lato
+    # text: Manjari
+    # text: Overlock
+    # text: Spinnaker
+    # text: Sarala
+    # text: Jura
+    # text: Quantico
+    # code: Orbitron
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: orange
+      toggle:
+        icon: material/brightness-5
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
 plugins:
   - blog:
       blog_dir: .
