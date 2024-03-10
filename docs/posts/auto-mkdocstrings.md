@@ -119,7 +119,7 @@ docs](https://www.dynaconf.com/).
 What they needed was for `mkdocstrings` to be setup and some tuning to present their API reference
 as they wanted. I'm not a frequent contributor to open-source but this seemed simple enough that I
 could do it and also a decent opportunity to learn something, so I started prepping the [demo
-run](#testing-it-out) and offered to give it a go.
+run](#trying-it-out) and offered to give it a go.
 
 Before the maintainers could reply to my offer, I went gun-ho and made a first attempt to build the
 API reference using the same automated recipe that I'd attempted on my dummy API. However, there was
