@@ -38,7 +38,8 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue grey
+      primary: custom
+      accent: orange
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -72,3 +73,5 @@ extra:
   analytics:
     provider: google
     property: G-NJ46997RBE
+extra_css:
+  - stylesheets/extra.css
