@@ -1,5 +1,5 @@
 site_name: Daft Dev (Blog by Mitch)
-site_url: https://daftdev.blog
+site_url: https://mitches-got-glitches.github.io/developer_blog/
 theme:
   name: material
   logo: img/pigeon.png
@@ -49,7 +49,6 @@ plugins:
   - search
   - tags
   - glightbox
-  - social
 
 nav:
   - index.md
