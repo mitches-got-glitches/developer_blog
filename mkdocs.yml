@@ -73,5 +73,12 @@ extra:
   analytics:
     provider: google
     property: G-NJ46997RBE
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/mitchelledmunds/
+      name: Mitch Edmunds
+    - icon: fontawesome/brands/github
+      link: https://github.com/mitches-got-glitches
+      name: mitches-got-glitches
 extra_css:
   - stylesheets/extra.css
