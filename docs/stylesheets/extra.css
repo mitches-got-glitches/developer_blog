@@ -3,5 +3,8 @@
   }
 :root {
     --md-primary-fg-color:  #619eb3;
+    --md-primary-fg-color--light: #619eb3;
     --md-primary-fg-color--dark:  #619eb3;
+    --md-primary-bg-color:               hsla(0, 0%, 100%, 1);
+    --md-primary-bg-color--light:        hsla(0, 0%, 100%, 0.7);
 }
