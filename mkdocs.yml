@@ -3,6 +3,7 @@ site_url: https://mitches-got-glitches.github.io/developer_blog/
 theme:
   name: material
   logo: img/pigeon.png
+  favicon: img/pigeon.png
   custom_dir: overrides
   features:
     - content.code.copy
@@ -49,7 +50,6 @@ plugins:
   - search
   - tags
   - glightbox
-
 nav:
   - index.md
 markdown_extensions:
