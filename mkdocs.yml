@@ -23,10 +23,6 @@ theme:
     # text: Quantico
     # code: Orbitron
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: black
@@ -34,7 +30,10 @@ theme:
       toggle:
         icon: material/brightness-5
         name: Switch to dark mode
-
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
