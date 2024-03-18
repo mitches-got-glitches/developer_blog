@@ -25,7 +25,7 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: black
+      primary: custom
       accent: orange
       toggle:
         icon: material/brightness-5
@@ -48,8 +48,11 @@ plugins:
   - search
   - tags
   - glightbox
-  - social
-
+  - social:
+      cards_layout_options:
+        background_color: "#619eb3"
+        # color: "#252627"
+        font_family: Roboto
 nav:
   - index.md
 markdown_extensions:
