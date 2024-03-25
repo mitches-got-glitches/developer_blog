@@ -4,6 +4,7 @@ categories:
   - git
   - tips
   - pre-commit
+  - devtools
 authors:
   - mitches-got-glitches
 comments: true
