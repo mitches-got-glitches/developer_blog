@@ -1,12 +1,12 @@
 ---
-date: 2024-04-05
+date: 2024-04-06
 categories:
   - linux
   - bash
+  - python
 authors:
   - mitches-got-glitches
 comments: true
-draft: true
 ---
 
 # Creating a portable Python development environment

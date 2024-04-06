@@ -1,12 +1,12 @@
 ---
-date: 2024-04-01
+date: 2024-04-06
 categories:
   - python
   - windows
+  - wsl
 authors:
   - mitches-got-glitches
 comments: true
-draft: true
 ---
 
 # Setting up a new Windows laptop for Python development
@@ -311,7 +311,7 @@ yet, maybe another time...
 ### Setting up on Linux (WSL)
 
 I've put up [a separate post covering how I've setup my WSL development environment in a portable
-way](reproducible-linux-env.md).
+way](reproducible-linux-env.md). It's definitely worth checking out!
 
 ### Extras
 
@@ -332,8 +332,8 @@ scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/downl
 $env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
 ```
 
-Many of the terminals make use of iconography which requires you to have a [Nerd Font][nerd-fonts]
-installed. Oh My Posh provides a nice tool to install the one you want:
+Many of the prompt themes make use of iconography which requires you to have a [Nerd
+Font][nerd-fonts] installed. Oh My Posh provides a nice tool to install the one you want:
 
 ```bash
 oh-my-posh font install FiraCode
@@ -391,5 +391,4 @@ workflow, but this is more than enough for now.
 
 ---
 
-*Which parts of this guide will you try and integrate into your own environment? I'd love to know
-below.*
+*Which parts of this guide will you try and integrate into your own environment?*
