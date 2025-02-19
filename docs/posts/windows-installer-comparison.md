@@ -115,7 +115,7 @@ the main one's for me being:
 * Install don't require admin rights, since they install just for your user account in `~/scoop/` by
   default.
 * It doesn't pollute your path, instead putting shims to installed programs in a single directory
-  and making sure that is added to the path (this seems similar to how Hmebrew does it).
+  and making sure that is added to the path (this seems similar to how Homebrew does it).
 
 It also has simpler packaging - on the GitHub README it says:
 
