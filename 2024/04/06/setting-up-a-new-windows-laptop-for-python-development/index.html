@@ -1,0 +1,1494 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mitches-got-glitches.github.io/developer_blog/2024/04/06/setting-up-a-new-windows-laptop-for-python-development/">
+      
+      
+        <link rel="prev" href="../../01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use/">
+      
+      
+        <link rel="next" href="../creating-a-portable-python-development-environment/">
+      
+      
+      <link rel="icon" href="../../../../img/pigeon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Setting up a new Windows laptop for Python development - Daft Dev (Blog by Mitch)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.17 2.76A10.1 10.1 0 0 1 12 2c1.31 0 2.61.26 3.83.76 1.21.5 2.31 1.24 3.24 2.17s1.67 2.03 2.17 3.24c.5 1.22.76 2.52.76 3.83 0 2.65-1.05 5.2-2.93 7.07A9.97 9.97 0 0 1 12 22a10.1 10.1 0 0 1-3.83-.76 10 10 0 0 1-3.24-2.17A9.97 9.97 0 0 1 2 12c0-2.65 1.05-5.2 2.93-7.07.93-.93 2.03-1.67 3.24-2.17M12 17l1.56-3.42L17 12l-3.44-1.56L12 7l-1.57 3.44L7 12l3.43 1.58z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Nunito Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-NJ46997RBE"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-NJ46997RBE",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-NJ46997RBE",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Setting up a new Windows laptop for Python development - Daft Dev (Blog by Mitch)" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="https://mitches-got-glitches.github.io/developer_blog/assets/images/social/posts/windows-laptop-setup.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://mitches-got-glitches.github.io/developer_blog/2024/04/06/setting-up-a-new-windows-laptop-for-python-development/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Setting up a new Windows laptop for Python development - Daft Dev (Blog by Mitch)" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="https://mitches-got-glitches.github.io/developer_blog/assets/images/social/posts/windows-laptop-setup.png" >
+      
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-a-new-windows-laptop-for-python-development" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Daft Dev (Blog by Mitch)" class="md-header__button md-logo" aria-label="Daft Dev (Blog by Mitch)" data-md-component="logo">
+      
+  <img src="../../../../img/pigeon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Daft Dev (Blog by Mitch)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setting up a new Windows laptop for Python development
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="orange"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Daft Dev (Blog by Mitch)" class="md-nav__button md-logo" aria-label="Daft Dev (Blog by Mitch)" data-md-component="logo">
+      
+  <img src="../../../../img/pigeon.png" alt="logo">
+
+    </a>
+    Daft Dev (Blog by Mitch)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/bash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    bash
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/devtools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    devtools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/pre-commit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pre-commit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wsl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-backstory" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Backstory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Goals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-on-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up on Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up on Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#updating-powershell-to-latest-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating Powershell to latest version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-microsoft-apps-with-winget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Microsoft Apps with winget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-chocolatey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Chocolatey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-scoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing scoop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-some-apps-with-scoop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing some apps with scoop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-some-apps-with-chocolatey" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing some apps with Chocolatey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up VS Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-on-linux-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up on Linux (WSL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#make-sure-docker-desktop-configured-to-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make sure Docker Desktop configured to WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-terminal-prompts-with-oh-my-posh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom terminal prompts with Oh-My-Posh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wrap-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wrap Up
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/mitches-got-glitches.png" alt="Mitch Edmunds">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Mitch Edmunds
+                        
+                      </strong>
+                      <br>
+                      Creator
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2024-04-06 00:00:00+00:00" class="md-ellipsis">April 6, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/python/">python</a>, 
+                              <a href="../../../../category/windows/">windows</a>, 
+                              <a href="../../../../category/wsl/">wsl</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              10 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+<h1 id="setting-up-a-new-windows-laptop-for-python-development">Setting up a new Windows laptop for Python development</h1>
+<h2 id="the-backstory">The Backstory</h2>
+<p>I've been doing a bit more development on my personal laptop lately and I was starting to brush up
+against the limits of my hardware. I have a Thinkpad X270, and although it comes with the renowned
+keyboard and a sturdy (not quite) bullet-proof chassis, I was starting to question the other parts
+of the spec... 8GB of RAM, an Intel i5-62000U processor and only 155GB of usable disk... I quickly
+ran out of space after setting up Windows Subsystem for Linux, a few versions of Python and some
+virtual environments.</p>
+<p>Fair enough, I had a bit of bloat that I could slim down but I didn't want to have to make this a
+regular occurrence. Also, being a bit of a tab whore I was starting to experience a bit of slowness
+as I switched contexts between <abbr title="Visual Studio Code">VS Code</abbr> and my browser. Frankly, I could do with an upgrade. And
+although it had absolutely zero influence over this decision I was also experiencing a few ping
+issues when playing Age of Empires II: Definitive Edition online despite good ping and speeds on the
+internet tests... nope, no sway at all.</p>
+<!-- more -->
+
+<figure>
+  <a class="glightbox" href="../../../../img/ping-speeds.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ping speeds" src="../../../../img/ping-speeds.png" /></a>
+  <figcaption>Wireless speeds... musn't grumble</figcaption>
+</figure>
+<p>Although I was tempted by some new shiny models, I didn't want to break the bank. And although Macs
+are touted for development, I will forever be a Windows child - I just can't seem to break
+through my frustrations with the Apple UX. Plus, with Windows Subsystem for Linux now a thing and
+Windows 11 actually looking quite sleek I didn't feel the need to finally get over my Macphobia. If
+I had the money, (I think it would be funny...🎵), I would have probably went for a souped up Dell
+XPS 15 after seeing <a href="https://uk.pcmag.com/laptops/147048/dell-xps-15-9530-2023">some pretty solid reviews</a>. It seemed to offer good
+performance for programming and creative workloads while also having a decent graphics card.</p>
+<p>As it happens, I spotted a refurbed model of the XPS 15 (9570) on ebay which was packing a 1TB SSD
+and 32GB of RAM for just shy of £500. This model <a href="https://www.expertreviews.co.uk/dell/1407577/dell-xps-15-9570-review-2018">seemed to review pretty
+well</a> at the time, and I was happy with this spec at the price point so I
+decided to purchase. I'm not very tuned in to the world of CPU processors, but it came with an
+i7-8750H which, while not world-leading, seems <a href="https://cpu.userbenchmark.com/Compare/Intel-Core-i7-8750H-vs-Intel-Core-i5-6200U/m470418vsm36796">to offer a considerable improvement</a>
+over the i5-62000U of my Thinkpad. And on top of that it came equipped with a Nvidia GTX 1050Ti 4GB
+graphics card, so if Age of Empires did happen to fire up then I should have fewer online teammates
+complaining about my lag...</p>
+<h2 id="setup-goals">Setup Goals</h2>
+<p>So it arrived and on unboxing first thoughts were it's a bit chunkier, but then I'm intending to use
+it mainly as a desktop, and I'll probably hang on to the Thinkpad for a more portable work machine
+anyway.</p>
+<p>We're getting onto why I actually wanted to write this post, and that's to run through my
+development setup on a new Windows machine, mainly so that when I have to go through this again I
+have a good point to start from, but also to hopefully demonstrate some good practices for creating
+a productive development experience on Windows.</p>
+<p>Let me run through a few of my main goals:</p>
+<ol>
+<li>
+<p><strong>Using WSL2 for my main development environment</strong></p>
+<p>Linux is probably the most common build environment when building applications, and as such, it
+makes sense to develop in Linux if we can. <a href="https://learn.microsoft.com/en-us/windows/wsl/about#what-is-wsl-2">Windows Subsystem for Linux</a> offers an
+awesome way to run a Linux environment on Windows without a virtual machine. It's pretty simple
+to do and it automatically mounts your Windows drive. The <abbr title="Windows Subsystem for Linux">WSL</abbr> extension for <abbr title="Visual Studio Code">VS Code</abbr> is going to
+provide a seamless development experience between the Windows and Linux environments.</p>
+</li>
+<li>
+<p><strong>Using virtual environments where possible to keep my base installs unpolluted</strong></p>
+<p>This should make libraries/tools easy to purge or upgrade and to prevent any base installations
+from getting corrupted. I also want to keep project environments separate, and only install what
+I need to with as few duplicate installs as necessary.</p>
+<p>Two great tools for this in Python are <a href="https://github.com/pyenv/pyenv"><code>pyenv</code></a>, which allows for easy installation and
+switching between different Python versions, and <a href="https://pipx.pypa.io/stable/"><code>pipx</code></a>, which installs CLI tools in
+their own isolated virtual environments, puts all the shims in one place and adds this location
+to your path so you can use these tools anywhere.</p>
+</li>
+<li>
+<p><strong>Using the command-line and package managers</strong></p>
+<p>The aim is to automate much of this in the future by putting a bunch of commands into a script,
+so using the command-line is a must. I also want to make use of some useful package managers:</p>
+<ul>
+<li><a href="https://chocolatey.org/">chocolatey</a> (<code>choco</code>) / <a href="https://scoop.sh/">scoop</a> / <code>winget</code> for
+  Windows</li>
+<li><code>apt</code> for Linux (Debian/Ubuntu) and also <a href="https://brew.sh/">Homebrew</a> (<code>brew</code>) (yes it works
+  on Linux too)</li>
+</ul>
+</li>
+<li>
+<p><strong>Making my config dotfiles portable</strong></p>
+<p>As developers, over time we gather a considerable amount of configurations that once we get used
+to it becomes really difficult to live without. I want a way to make these easily portable to
+new machines so that even if I'm SSH-ing into a machine on the cloud I can get the development
+environment that's going to enable me to be most productive.</p>
+</li>
+</ol>
+<p>Anyway, enough goal-setting, let's get cracking...</p>
+<h2 id="the-setup">The Setup</h2>
+<h3 id="installing-wsl">Installing <abbr title="Windows Subsystem for Linux">WSL</abbr></h3>
+<p>First on my list is installing <abbr title="Windows Subsystem for Linux">WSL</abbr>. This can take a few hours so it's best to get started with
+early. Open Powershell with admin privileges and type in the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wsl --install
+</span></code></pre></div>
+<p>That easy! The default <abbr title="Operating System">OS</abbr> installed for me was Ubuntu 22.04. Leave that to brew while we move onto
+some of our Windows installs.</p>
+<h3 id="setting-up-on-windows">Setting up on Windows</h3>
+<p>While writing this guide (mostly to myself), I ended up diving a bit into Windows package managers
+and which would be the most suitable. I've spun this out into <a href="../../01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use/">a separate
+post</a> so that I can keep this page focused on actual installation
+steps. But my conclusions were:</p>
+<ul>
+<li>use <code>scoop</code> for any Windows dev tools and a first port of call for other apps</li>
+<li>use <code>winget</code> for Microsoft products e.g. OneDrive, OneNote, etc.</li>
+<li>use <code>choco</code> as a back up for apps that aren't available in <code>scoop</code> e.g. Docker Desktop</li>
+</ul>
+<p>So here we go on the Windows steps:</p>
+<h4 id="updating-powershell-to-latest-version">Updating Powershell to latest version</h4>
+<p>In Powershell with admin privileges:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>winget install --id Microsoft.Powershell --source winget
+</span></code></pre></div>
+<h4 id="install-microsoft-apps-with-winget">Install Microsoft Apps with <code>winget</code></h4>
+<p>In Powershell with admin privileges:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>winget install Microsoft.OneDrive --accept-source-agreements --accept-package-agreements
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>winget install onenote --accept-source-agreements --accept-package-agreements
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Adding the arguments <code>--accept-source-agreements --accept-package-agreements</code> results in less
+confirmations needed in the shell. Use if you're happy with it.</p>
+</div>
+<h4 id="installing-chocolatey">Installing Chocolatey</h4>
+<p>In Powershell with admin privileges:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Set-ExecutionPolicy AllSigned; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
+</span></code></pre></div>
+<p>Confirm the prompts as necessary (trying to figure out a way to skip these temporarily). You should
+now have Chocolatey installed, you can check by running <code>choco</code> from the command line.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <a href="https://chocolatey.org/install">install guide</a> says to inspect their <code>install.ps1</code> script
+before running, even though they take security seriously. Personally, I'm happy to go ahead with
+it and I'm not quite sure what I'm looking for anyway.</p>
+</div>
+<h4 id="installing-scoop">Installing <code>scoop</code></h4>
+<p>In the <code>scoop</code> docs, it says to install from a Powershell terminal with the following:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+</span></code></pre></div>
+<p>However, I was getting a few issues with the execution policy - this seemed to work instead:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>$AllProtocols = [System.Net.SecurityProtocolType]&#39;Ssl3,Tls,Tls11,Tls12&#39;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>[System.Net.ServicePointManager]::SecurityProtocol = $AllProtocols
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>irm get.scoop.sh | iex
+</span></code></pre></div>
+<p>This issues may be down to the version of Powershell I was on when initially installing <code>scoop</code> but
+this remains uninvestigated - just need something that works.</p>
+<h4 id="installing-some-apps-with-scoop">Installing some apps with scoop</h4>
+<p>I just wanted to touch briefly on a few apps installed here.</p>
+<p>Particularly for develepment I'm installing:</p>
+<ul>
+<li><code>git</code> as my version control system</li>
+<li><code>pyenv</code> so that I can install multiple Python versions in isolated environments and easily switch
+  between them. <code>scoop</code> will install <a href="https://github.com/pyenv-win/pyenv-win"><code>pyenv-win</code></a> since it is an installer for Windows.</li>
+<li><abbr title="Visual Studio Code">VS Code</abbr> as my main <abbr title="Integrated Development Environment">IDE</abbr></li>
+<li><a href="https://ohmyposh.dev/">Oh My Posh</a> which offers nice prompt customisation.</li>
+</ul>
+<p>Installing a couple of chat tools:</p>
+<ul>
+<li><a href="https://slack.com/intl/en-gb">Slack</a>: some developer communities are on here.</li>
+<li><a href="https://element.io/">Element</a>: same here - I've been communicating with the <code>dyanconf</code>
+  maintainers here recently on some recent contributions.</li>
+</ul>
+<p>And then I've just got Firefox as my browser, <a href="https://obsidian.md/">Obsidian</a> which is a
+note-taking app I am experimenting with a little. And Steam, because... well...</p>
+<p>In any shell (doesn't need to be admin):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>scoop<span class="w"> </span>update
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>scoop<span class="w"> </span>install<span class="w"> </span>git
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>scoop<span class="w"> </span>install<span class="w"> </span>pyenv
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>scoop<span class="w"> </span>install<span class="w"> </span>https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>scoop<span class="w"> </span>bucket<span class="w"> </span>add<span class="w"> </span>extras
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>scoop<span class="w"> </span>install<span class="w"> </span>vscode
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>reg<span class="w"> </span>import<span class="w"> </span><span class="s2">&quot;C:\Users\User\scoop\apps\vscode\current\install-context.reg&quot;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>reg<span class="w"> </span>import<span class="w"> </span><span class="s2">&quot;C:\Users\User\scoop\apps\vscode\current\install-associations.reg&quot;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># I think the following 3 are in extras too, since they have GUIs.</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>scoop<span class="w"> </span>install<span class="w"> </span>screentogif
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>scoop<span class="w"> </span>install<span class="w"> </span>obsidian
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>scoop<span class="w"> </span>install<span class="w"> </span>element
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>scoop<span class="w"> </span>install<span class="w"> </span>slack
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>scoop<span class="w"> </span>install<span class="w"> </span>firefox
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>scoop<span class="w"> </span>bucket<span class="w"> </span>add<span class="w"> </span>games
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>scoop<span class="w"> </span>install<span class="w"> </span>steam
+</span></code></pre></div>
+<h4 id="installing-some-apps-with-chocolatey">Installing some apps with Chocolatey</h4>
+<p>There were a couple of apps that I struggled to install via <code>scoop</code>:</p>
+<ul>
+<li><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a>: this is another developer tool for pulling and running
+  containers, which happens to integrate very nicely with <abbr title="Windows Subsystem for Linux">WSL</abbr>.</li>
+<li>Discord: another chat app with developer communities, plus I use this to chat to my rage buddies.</li>
+</ul>
+<p>You can install <code>docker</code> with scoop since it's just a CLI tool, but I wanted the Desktop GUI too.
+For some reason it's not in the extras bucket but that's fine, it's why I have <code>choco</code> as backup.</p>
+<p>Discord is available on <code>scoop</code>, but for some reason when I installed it via scoop Windows Defender
+seemed to think it was a trojan. Sounds like I should be panicking huh? But a quick search seemed to
+identify it as a known false flag - panic over?. Anyway, I just decided to use <code>choco</code> for this
+rather than investigate further.</p>
+<p>In Powershell with admin privileges:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>choco install docker-desktop
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>choco install discord
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don't want to confirm Y/N for each install, you can switch this off in choco global
+config with <code>choco feature enable -n=allowGlobalConfirmation</code>.</p>
+</div>
+<h4 id="installing-python">Installing Python</h4>
+<p>As noted in my setup goals the plan is to have <abbr title="Windows Subsystem for Linux">WSL</abbr> as my main development environment, but it will
+still be useful to have at least one version of Python installed on the Windows path. I'll use
+<code>pyenv</code> to install it.</p>
+<p>In any shell (doesn't need to be admin):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>pyenv<span class="w"> </span>update<span class="w"> </span><span class="c1"># (2)!</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1"># Install the latest Python version</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nv">latest_py</span><span class="o">=</span><span class="k">$(</span>pyenv<span class="w"> </span>install<span class="w"> </span>--list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s1">&#39;[a-z]&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tail<span class="w"> </span>-1<span class="k">)</span><span class="w"> </span><span class="c1"># (1)!</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>pyenv<span class="w"> </span>install<span class="w"> </span><span class="nv">$latest_py</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>pyenv<span class="w"> </span>global<span class="w"> </span><span class="nv">$latest_py</span><span class="w"> </span><span class="c1"># (3)!</span>
+</span></code></pre></div>
+<ol>
+<li>This will grab the latest stable Python release.</li>
+<li>Make sure pyenv is up-to-date with current versions.</li>
+<li>Once installed we'll set this version as the global default.</li>
+</ol>
+<h4 id="setting-up-vs-code">Setting up <abbr title="Visual Studio Code">VS Code</abbr></h4>
+<p>This is quite easy with <abbr title="Visual Studio Code">VS Code</abbr>'s <a href="https://code.visualstudio.com/docs/editor/settings-sync">settings sync feature</a> which I'd switched
+on and linked to my GitHub account on my old PC. All I had to do was log in and all of my
+configurations, extensions and keybindings were ported like magic.</p>
+<p><a class="glightbox" href="../../../../img/settings_sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="settings sync" src="../../../../img/settings_sync.png" /></a></p>
+<p>This guide is already getting quite long so I won't get into the specifics of my <abbr title="Visual Studio Code">VS Code</abbr> setup just
+yet, maybe another time...</p>
+<h3 id="setting-up-on-linux-wsl">Setting up on Linux (<abbr title="Windows Subsystem for Linux">WSL</abbr>)</h3>
+<p>I've put up <a href="../creating-a-portable-python-development-environment/">a separate post covering how I've setup my <abbr title="Windows Subsystem for Linux">WSL</abbr> development environment in a portable
+way</a>. It's definitely worth checking out!</p>
+<h3 id="extras">Extras</h3>
+<h4 id="make-sure-docker-desktop-configured-to-wsl">Make sure Docker Desktop configured to <abbr title="Windows Subsystem for Linux">WSL</abbr></h4>
+<p>Make sure this setting is checked within Docker Desktop to use with <abbr title="Windows Subsystem for Linux">WSL</abbr>. This should make the Docker
+CLI available in <abbr title="Windows Subsystem for Linux">WSL</abbr> while Docker Desktop is up and running.</p>
+<p><a class="glightbox" href="../../../../img/docker-wsl-backend.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Docker WSL backend" src="../../../../img/docker-wsl-backend.png" /></a></p>
+<h4 id="custom-terminal-prompts-with-oh-my-posh">Custom terminal prompts with <a href="https://ohmyposh.dev/">Oh-My-Posh</a></h4>
+<p>Oh My Posh brings a nice pop of colour to the terminal with a variety of themes to choose from.
+Check out all of <a href="https://ohmyposh.dev/docs/themes">the fully customisable themes here</a>.</p>
+<div class="language-text highlight"><span class="filename">Installing with scoop...</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>scoop install https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/oh-my-posh.json
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>$env:Path += &quot;;C:\Users\user\AppData\Local\Programs\oh-my-posh\bin&quot;
+</span></code></pre></div>
+<p>Many of the prompt themes make use of iconography which requires you to have a <a href="https://www.nerdfonts.com/">Nerd
+Font</a> installed. Oh My Posh provides a nice tool to install the one you want:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>oh-my-posh<span class="w"> </span>font<span class="w"> </span>install<span class="w"> </span>FiraCode
+</span></code></pre></div>
+<p>Because I want to <a href="https://ohmyposh.dev/docs/installation/fonts#configuration">configure</a> the Nerd Fonts for Windows Terminal (which <abbr title="Windows Subsystem for Linux">WSL</abbr> launches
+in on Windows 11) and Visual Studio Code, I think I need the fonts installed on Windows rather than
+Linux. I installed in both though just to be sure:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>oh-my-posh<span class="w"> </span>font<span class="w"> </span>install<span class="w"> </span>Hack
+</span></code></pre></div>
+<p>I had a bit of trouble configuring the <abbr title="Visual Studio Code">VS Code</abbr> font for a while, I think because I didn't have "Mono"
+in the font name. Anyway, here's the two settings that I've configured for the 'Hack' Nerd Font:</p>
+<div class="language-json highlight"><span class="filename">Windows Terminal settings.json</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="nt">&quot;profiles&quot;</span><span class="p">:</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">        </span><span class="nt">&quot;defaults&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">            </span><span class="nt">&quot;font&quot;</span><span class="p">:</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">            </span><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">                </span><span class="nt">&quot;face&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hack Nerd Font Mono&quot;</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">        </span><span class="err">...</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-json highlight"><span class="filename">VS Code settings.json</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span><span class="nt">&quot;terminal.integrated.fontFamily&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&#39;Hack Nerd Font Mono&#39;&quot;</span><span class="p">,</span>
+</span></code></pre></div>
+<p>And with the font configured (only for nushell currently):</p>
+<p><a class="glightbox" href="../../../../img/ohmyposh-prompt.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="oh-my-posh prompt" src="../../../../img/ohmyposh-prompt.png" /></a></p>
+<p>I've <a href="https://github.com/mitches-got-glitches/dotfiles/blob/main/nu/.config/nushell/env.nu#L99-L101">configured for Monty's theme here</a>. You can also check out my other nu config
+in the <code>custom.nu</code> file there if you're interested.</p>
+<h2 id="wrap-up">Wrap Up</h2>
+<p>So there you have it, my setup for Python development and beyond on my new Windows 11 laptop. It's
+been a bit of a beast doing all of it and capturing in writing but I hope you (and my future self)
+gets something useful from it.</p>
+<p>I may come back and make some new additions to this from time-to-time as I integrate more into my
+workflow, but this is more than enough for now.</p>
+<hr />
+<p><em>Which parts of this guide will you try and integrate into your own environment?</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <script src="https://giscus.app/client.js"
+        data-repo="mitches-got-glitches/developer_blog"
+        data-repo-id="R_kgDOLWfIDA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOLWfIDM4Cdmio"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme)
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../01/chocolatey-vs-scoop-vs-winget---which-windows-package-manager-to-use/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chocolatey vs. Scoop vs Winget - which Windows package manager to use?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chocolatey vs. Scoop vs Winget - which Windows package manager to use?
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../creating-a-portable-python-development-environment/" class="md-footer__link md-footer__link--next" aria-label="Next: Creating a portable Python development environment">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Creating a portable Python development environment
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Copyright and theme information -->
+<div class="md-copyright">
+  
+  
+    Made with
+    <a
+      href="https://squidfunk.github.io/mkdocs-material/"
+      target="_blank" rel="noopener"
+    >
+      Material for MkDocs
+    </a>
+  
+  <br>
+  Logo by
+  <a
+    href="https://www.flaticon.com/authors/mihimihi"
+    target="_blank" rel="noopener"
+  >
+    Mihimihi
+  </a>
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.linkedin.com/in/mitchelledmunds/" target="_blank" rel="noopener" title="Mitch Edmunds" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/mitches-got-glitches" target="_blank" rel="noopener" title="mitches-got-glitches" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.annotate", "navigation.sections", "navigation.footer", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
